@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00A2C3022B0532940087DECB /* SurveyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3012B0532940087DECB /* SurveyAppApp.swift */; };
-		00A2C3042B0532940087DECB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3032B0532940087DECB /* ContentView.swift */; };
 		00A2C3062B0532950087DECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A2C3052B0532950087DECB /* Assets.xcassets */; };
 		00A2C3092B0532950087DECB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A2C3082B0532950087DECB /* Preview Assets.xcassets */; };
 		00A2C3132B0532960087DECB /* SurveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3122B0532960087DECB /* SurveyAppTests.swift */; };
 		00A2C31D2B0532960087DECB /* SurveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C31C2B0532960087DECB /* SurveyAppUITests.swift */; };
 		00A2C31F2B0532960087DECB /* SurveyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C31E2B0532960087DECB /* SurveyAppUITestsLaunchTests.swift */; };
 		00A2C3302B0533AA0087DECB /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C32F2B0533AA0087DECB /* SurveyView.swift */; };
+		00A2C3382B0534D20087DECB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3372B0534D20087DECB /* HomeView.swift */; };
+		00A2C33A2B0534F80087DECB /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3392B0534F80087DECB /* SurveyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		00A2C2FE2B0532940087DECB /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A2C3012B0532940087DECB /* SurveyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppApp.swift; sourceTree = "<group>"; };
-		00A2C3032B0532940087DECB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		00A2C3052B0532950087DECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00A2C3082B0532950087DECB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00A2C30E2B0532960087DECB /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +46,8 @@
 		00A2C31C2B0532960087DECB /* SurveyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppUITests.swift; sourceTree = "<group>"; };
 		00A2C31E2B0532960087DECB /* SurveyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00A2C32F2B0533AA0087DECB /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		00A2C3372B0534D20087DECB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		00A2C3392B0534F80087DECB /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +160,8 @@
 		00A2C32E2B0533290087DECB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				00A2C3032B0532940087DECB /* ContentView.swift */,
-				00A2C32F2B0533AA0087DECB /* SurveyView.swift */,
+				00A2C3342B0534AA0087DECB /* Home */,
+				00A2C3332B0534A20087DECB /* Survey */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -176,6 +178,39 @@
 			children = (
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		00A2C3332B0534A20087DECB /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				00A2C3362B0534BC0087DECB /* View */,
+				00A2C3352B0534B10087DECB /* Model */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		00A2C3342B0534AA0087DECB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				00A2C3372B0534D20087DECB /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		00A2C3352B0534B10087DECB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00A2C3392B0534F80087DECB /* SurveyViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00A2C3362B0534BC0087DECB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00A2C32F2B0533AA0087DECB /* SurveyView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,8 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00A2C3042B0532940087DECB /* ContentView.swift in Sources */,
+				00A2C3382B0534D20087DECB /* HomeView.swift in Sources */,
 				00A2C3022B0532940087DECB /* SurveyAppApp.swift in Sources */,
+				00A2C33A2B0534F80087DECB /* SurveyViewModel.swift in Sources */,
 				00A2C3302B0533AA0087DECB /* SurveyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

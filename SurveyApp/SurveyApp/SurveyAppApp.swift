@@ -11,7 +11,7 @@ import SwiftUI
 struct SurveyAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
