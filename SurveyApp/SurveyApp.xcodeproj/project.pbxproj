@@ -16,6 +16,17 @@
 		00A2C3302B0533AA0087DECB /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C32F2B0533AA0087DECB /* SurveyView.swift */; };
 		00A2C3382B0534D20087DECB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3372B0534D20087DECB /* HomeView.swift */; };
 		00A2C33A2B0534F80087DECB /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3392B0534F80087DECB /* SurveyViewModel.swift */; };
+		00A2C33C2B0535A70087DECB /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C33B2B0535A70087DECB /* RequestExecutor.swift */; };
+		00A2C33E2B0535D10087DECB /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C33D2B0535D10087DECB /* URLRequestBuilder.swift */; };
+		00A2C3402B0535ED0087DECB /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C33F2B0535ED0087DECB /* HTTPRequest.swift */; };
+		00A2C3422B0535FD0087DECB /* HTTPPathPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3412B0535FD0087DECB /* HTTPPathPattern.swift */; };
+		00A2C3442B0536160087DECB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3432B0536160087DECB /* Question.swift */; };
+		00A2C3462B0536560087DECB /* SurveyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3452B0536560087DECB /* SurveyService.swift */; };
+		00A2C3482B0536790087DECB /* SurveySubmitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3472B0536790087DECB /* SurveySubmitService.swift */; };
+		00A2C34A2B05369D0087DECB /* FetchQuestionsHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3492B05369D0087DECB /* FetchQuestionsHTTPRequest.swift */; };
+		00A2C34C2B0536AC0087DECB /* SubmitQuestionHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C34B2B0536AC0087DECB /* SubmitQuestionHTTPRequest.swift */; };
+		00B0501C2B0571C10028FFFA /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0501B2B0571C10028FFFA /* ServiceAssembly.swift */; };
+		00B0501E2B0572150028FFFA /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0501D2B0572150028FFFA /* NetworkAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,17 @@
 		00A2C32F2B0533AA0087DECB /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		00A2C3372B0534D20087DECB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		00A2C3392B0534F80087DECB /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		00A2C33B2B0535A70087DECB /* RequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
+		00A2C33D2B0535D10087DECB /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		00A2C33F2B0535ED0087DECB /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		00A2C3412B0535FD0087DECB /* HTTPPathPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPPathPattern.swift; sourceTree = "<group>"; };
+		00A2C3432B0536160087DECB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		00A2C3452B0536560087DECB /* SurveyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyService.swift; sourceTree = "<group>"; };
+		00A2C3472B0536790087DECB /* SurveySubmitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySubmitService.swift; sourceTree = "<group>"; };
+		00A2C3492B05369D0087DECB /* FetchQuestionsHTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchQuestionsHTTPRequest.swift; sourceTree = "<group>"; };
+		00A2C34B2B0536AC0087DECB /* SubmitQuestionHTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitQuestionHTTPRequest.swift; sourceTree = "<group>"; };
+		00B0501B2B0571C10028FFFA /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		00B0501D2B0572150028FFFA /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +159,7 @@
 		00A2C32B2B0533170087DECB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				00A2C3432B0536160087DECB /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,8 +167,11 @@
 		00A2C32C2B05331D0087DECB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				00B0501D2B0572150028FFFA /* NetworkAssembly.swift */,
 				00A2C3322B0533F40087DECB /* API */,
 				00A2C3312B0533EE0087DECB /* Requests */,
+				00A2C33F2B0535ED0087DECB /* HTTPRequest.swift */,
+				00A2C3412B0535FD0087DECB /* HTTPPathPattern.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -153,6 +179,9 @@
 		00A2C32D2B0533220087DECB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				00B0501B2B0571C10028FFFA /* ServiceAssembly.swift */,
+				00A2C3452B0536560087DECB /* SurveyService.swift */,
+				00A2C3472B0536790087DECB /* SurveySubmitService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,6 +198,8 @@
 		00A2C3312B0533EE0087DECB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				00A2C3492B05369D0087DECB /* FetchQuestionsHTTPRequest.swift */,
+				00A2C34B2B0536AC0087DECB /* SubmitQuestionHTTPRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -176,6 +207,8 @@
 		00A2C3322B0533F40087DECB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				00A2C33B2B0535A70087DECB /* RequestExecutor.swift */,
+				00A2C33D2B0535D10087DECB /* URLRequestBuilder.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -343,10 +376,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A2C34C2B0536AC0087DECB /* SubmitQuestionHTTPRequest.swift in Sources */,
 				00A2C3382B0534D20087DECB /* HomeView.swift in Sources */,
 				00A2C3022B0532940087DECB /* SurveyAppApp.swift in Sources */,
+				00B0501C2B0571C10028FFFA /* ServiceAssembly.swift in Sources */,
 				00A2C33A2B0534F80087DECB /* SurveyViewModel.swift in Sources */,
+				00A2C3482B0536790087DECB /* SurveySubmitService.swift in Sources */,
+				00A2C3442B0536160087DECB /* Question.swift in Sources */,
+				00A2C3422B0535FD0087DECB /* HTTPPathPattern.swift in Sources */,
+				00B0501E2B0572150028FFFA /* NetworkAssembly.swift in Sources */,
+				00A2C33C2B0535A70087DECB /* RequestExecutor.swift in Sources */,
+				00A2C3402B0535ED0087DECB /* HTTPRequest.swift in Sources */,
+				00A2C34A2B05369D0087DECB /* FetchQuestionsHTTPRequest.swift in Sources */,
+				00A2C3462B0536560087DECB /* SurveyService.swift in Sources */,
 				00A2C3302B0533AA0087DECB /* SurveyView.swift in Sources */,
+				00A2C33E2B0535D10087DECB /* URLRequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
