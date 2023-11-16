@@ -27,6 +27,7 @@
 		00A2C34C2B0536AC0087DECB /* SubmitQuestionHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C34B2B0536AC0087DECB /* SubmitQuestionHTTPRequest.swift */; };
 		00B0501C2B0571C10028FFFA /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0501B2B0571C10028FFFA /* ServiceAssembly.swift */; };
 		00B0501E2B0572150028FFFA /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0501D2B0572150028FFFA /* NetworkAssembly.swift */; };
+		00FD44882B0635E2003A1BC8 /* View+OnLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD44872B0635E2003A1BC8 /* View+OnLoad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		00A2C34B2B0536AC0087DECB /* SubmitQuestionHTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitQuestionHTTPRequest.swift; sourceTree = "<group>"; };
 		00B0501B2B0571C10028FFFA /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		00B0501D2B0572150028FFFA /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
+		00FD44872B0635E2003A1BC8 /* View+OnLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnLoad.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				00A2C3012B0532940087DECB /* SurveyAppApp.swift */,
+				00FD44862B0635CA003A1BC8 /* Extensions */,
 				00A2C32B2B0533170087DECB /* Models */,
 				00A2C32E2B0533290087DECB /* Modules */,
 				00A2C32C2B05331D0087DECB /* Network */,
@@ -244,6 +247,14 @@
 				00A2C32F2B0533AA0087DECB /* SurveyView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		00FD44862B0635CA003A1BC8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00FD44872B0635E2003A1BC8 /* View+OnLoad.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				00A2C3462B0536560087DECB /* SurveyService.swift in Sources */,
 				00A2C3302B0533AA0087DECB /* SurveyView.swift in Sources */,
 				00A2C33E2B0535D10087DECB /* URLRequestBuilder.swift in Sources */,
+				00FD44882B0635E2003A1BC8 /* View+OnLoad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

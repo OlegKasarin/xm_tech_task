@@ -41,11 +41,10 @@ struct HomeView: View {
                         surveySubmitService: ServiceAssembly.surveySubmitService
                     )
                     SurveyView(viewModel: surveyViewModel)
-                    .toolbarRole(.editor)
+                        .toolbarRole(.editor)
                 }
             }
-        }
-        }
+        }    
     }
 }
 

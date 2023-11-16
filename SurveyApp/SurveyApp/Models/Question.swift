@@ -19,6 +19,7 @@ struct QuestionResponse: Codable {
 struct Question {
     let id: Int
     let question: String
+    var answer: String = ""
     
     init?(response: QuestionResponse) {
         guard let id = response.id, let question = response.question else {
