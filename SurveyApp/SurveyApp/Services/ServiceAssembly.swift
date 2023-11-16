@@ -13,4 +13,8 @@ final class ServiceAssembly {
     static var surveyService: SurveyServiceProtocol {
         SurveyService(executor: NetworkAssembly.requestExecutor)
     }
+    
+    static var surveySubmitService: SurveySubmitServiceProtocol {
+        SurveySubmitService(executor: NetworkAssembly.requestExecutor)
+    }
 }
