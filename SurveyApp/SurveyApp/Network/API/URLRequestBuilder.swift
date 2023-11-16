@@ -12,8 +12,11 @@ protocol URLRequestBuilderProtocol {
 }
 
 final class URLRequestBuilder: URLRequestBuilderProtocol {
+    private let baseURLString = "https://xm-assignment.web.app"
+    
     enum URLRequestBuilderError: Error {
         case invalidBaseURL
+        case invalidURLParameters
         case invalidBodyPayload
     }
     
@@ -31,13 +34,30 @@ final class URLRequestBuilder: URLRequestBuilderProtocol {
 
 private extension URLRequestBuilder {
     func buildURL(request: HTTPRequest) throws -> URL {
-        let baseURLString = "https://google.com"
-        
         guard let baseURL = URL(string: baseURLString) else {
             throw URLRequestBuilderError.invalidBaseURL
         }
         
-        return baseURL
+        do {
+            let url = try buildURL(baseURL: baseURL, request: request)
+            return url
+        } catch let error {
+            throw error
+        }
+    }
+    
+    func buildURL(baseURL: URL, request: HTTPRequest) throws -> URL {
+        guard var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true) else {
+            throw URLRequestBuilderError.invalidBaseURL
+        }
+        
+        components.path += request.pathPattern.rawValue
+        
+        guard let url = components.url else {
+            throw URLRequestBuilderError.invalidURLParameters
+        }
+        
+        return url
     }
     
     func buildURLRequest(url: URL, request: HTTPRequest) throws -> URLRequest {

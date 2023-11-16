@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SurveySubmitServiceProtocol {
-    func submit(id: Int, answer: String) -> Bool
+    func submit(id: Int, answer: String) async throws -> Bool
 }
 
 final class SurveySubmitService {
@@ -22,7 +22,11 @@ final class SurveySubmitService {
 // MARK: - SurveySubmitServiceProtocol
 
 extension SurveySubmitService: SurveySubmitServiceProtocol {
-    func submit(id: Int, answer: String) -> Bool {
-        return false
+    func submit(id: Int, answer: String) async throws -> Bool {
+        let request = SubmitQuestionHTTPRequest(id: id, answer: answer)
+        
+        let _: URLResponsePayload = try await executor.execute(request: request)
+        
+        return true
     }
 }
