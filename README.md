@@ -5,3 +5,7 @@ A simple Survey app written in SwiftUI
 - Swift
 - SwiftUI
 - Swift Concurrency
+
+Unit tests:
+- I used Sourcery;
+- For SUI unit tests I would use ViewInspector.
