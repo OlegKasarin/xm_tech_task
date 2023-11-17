@@ -21,16 +21,19 @@ struct Question {
     let question: String
     var answer: String = ""
     
+    // MARK: - Computed
+    
+    var isNoAnswer: Bool {
+        answer.isEmpty
+    }
+}
+
+extension Question {
     init?(response: QuestionResponse) {
         guard let id = response.id, let question = response.question else {
             return nil
         }
-        self.id = id
-        self.question = question
-    }
-    
-    init(id: Int, question: String) {
-        self.id = id
-        self.question = question
+        
+        self.init(id: id, question: question)
     }
 }
