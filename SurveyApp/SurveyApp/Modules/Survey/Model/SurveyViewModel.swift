@@ -13,7 +13,7 @@ final class SurveyViewModel: ObservableObject {
     @Published var questions: [Question] = []
     @Published var currentIndex: Int = 0
     
-    @Published private var submittedQuestions: [Int: String] = [:]
+    @Published private var submittedQuestions: Set<Int> = []
     
     @Published var submittedState = SubmittedAnswerState.none
     
@@ -66,7 +66,7 @@ final class SurveyViewModel: ObservableObject {
             return false
         }
         
-        return submittedQuestions[currentQuestion.id] != nil
+        return submittedQuestions.contains(currentQuestion.id)
     }
     
     // MARK: - Dependencies
@@ -127,8 +127,8 @@ private extension SurveyViewModel {
                 return
             }
             
-            // store submitted answer
-            submittedQuestions[id] = answer
+            // store id of submitted answer
+            submittedQuestions.insert(id)
             
             submittedState = .success
         } catch {
@@ -136,4 +136,3 @@ private extension SurveyViewModel {
         }
     }
 }
-

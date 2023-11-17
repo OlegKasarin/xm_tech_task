@@ -14,7 +14,6 @@ struct SurveyView: View {
         ZStack {
             Color.gray
                 .ignoresSafeArea()
-            
             SurveyContentView(viewModel: viewModel)
         }
     }
@@ -29,9 +28,6 @@ struct SurveyContentView: View {
         viewModel.currentQuestion?.question ?? ""
     }
     
-    private let textFieldPlaceholder = "Type here for an answer..."
-    @FocusState private var isTextViewFocused: Bool
-    
     var body: some View {
         VStack {
             SurveyBannerView(viewModel: viewModel)
@@ -39,34 +35,7 @@ struct SurveyContentView: View {
             questionTextView(text: currentQuestion)
             
             if let _ = viewModel.currentQuestion {
-                TextField(
-                    textFieldPlaceholder,
-                    text: $viewModel.questions[viewModel.currentIndex].answer,
-                    axis: .horizontal
-                )
-                .focused($isTextViewFocused)
-                .submitLabel(.done)
-                .lineLimit(1)
-                .autocorrectionDisabled()
-                .font(.title)
-                .textFieldStyle(.roundedBorder)
-                .padding()
-                .disabled(viewModel.isAlreadySubmittedQuestion)
-                .onSubmit(of: .text) {
-                    isTextViewFocused = false
-                }
-                
-                Spacer()
-                
-                submitButton(
-                    title: viewModel.buttonTitle,
-                    isDisabled: viewModel.isSubmitButtonDisabled
-                ) {
-                    Task {
-                        isTextViewFocused = false
-                        viewModel.submit()
-                    }
-                }
+                SurveySubmitAnswerView(viewModel: viewModel)
             } else {
                 ProgressView()
             }
@@ -99,20 +68,6 @@ struct SurveyContentView: View {
             .font(.title.bold())
             .foregroundColor(Color.black)
             .padding()
-    }
-    
-    private func submitButton(
-        title: String,
-        isDisabled: Bool,
-        action: @escaping () -> ()
-    ) -> some View {
-        Button(title) {
-            action()
-        }
-        .frame(width: 300, height: 48)
-        .background(Color.white)
-        .cornerRadius(10)
-        .disabled(isDisabled)
     }
     
     private func button(
@@ -205,6 +160,60 @@ struct SurveyBannerView: View {
         .padding()
         .background(Color.red)
         .padding()
+    }
+}
+
+// MARK: - SurveyTextFieldView
+
+struct SurveySubmitAnswerView: View {
+    @ObservedObject var viewModel: SurveyViewModel
+    
+    private let textFieldPlaceholder = "Type here for an answer..."
+    @FocusState private var isTextViewFocused: Bool
+    
+    var body: some View {
+        TextField(
+            textFieldPlaceholder,
+            text: $viewModel.questions[viewModel.currentIndex].answer,
+            axis: .horizontal
+        )
+        .focused($isTextViewFocused)
+        .submitLabel(.done)
+        .lineLimit(1)
+        .autocorrectionDisabled()
+        .font(.title)
+        .textFieldStyle(.roundedBorder)
+        .padding()
+        .disabled(viewModel.isAlreadySubmittedQuestion)
+        .onSubmit(of: .text) {
+            isTextViewFocused = false
+        }
+        
+        Spacer()
+        
+        submitButton(
+            title: viewModel.buttonTitle,
+            isDisabled: viewModel.isSubmitButtonDisabled
+        ) {
+            Task {
+                isTextViewFocused = false
+                viewModel.submit()
+            }
+        }
+    }
+    
+    private func submitButton(
+        title: String,
+        isDisabled: Bool,
+        action: @escaping () -> ()
+    ) -> some View {
+        Button(title) {
+            action()
+        }
+        .frame(width: 300, height: 48)
+        .background(Color.white)
+        .cornerRadius(10)
+        .disabled(isDisabled)
     }
 }
 
