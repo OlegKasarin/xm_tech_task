@@ -59,7 +59,9 @@ struct SurveyContentView: View {
             }
         }
         .onLoad {
-            viewModel.didLoad()
+            Task {
+                try await viewModel.didLoad()
+            }
         }
     }
     
@@ -107,7 +109,7 @@ struct SurveyBannerView: View {
         case .failure:
             failureBannerView(text: "Failure!", retryButtonText: "RETRY") {
                 Task {
-                    viewModel.submit()
+                    try await viewModel.submit()
                 }
             }
             .onAppear {
@@ -197,7 +199,7 @@ struct SurveySubmitAnswerView: View {
         ) {
             Task {
                 isTextViewFocused = false
-                viewModel.submit()
+                try await viewModel.submit()
             }
         }
     }

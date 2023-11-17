@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000665D52B06B8D10025857F /* RequestExecutorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000665D42B06B8D10025857F /* RequestExecutorSpy.swift */; };
+		000665D92B0799070025857F /* SubmittedAnswerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000665D82B0799070025857F /* SubmittedAnswerState.swift */; };
+		000665DB2B07AF520025857F /* SurveySubmitServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000665DA2B07AF520025857F /* SurveySubmitServiceTests.swift */; };
+		000665DF2B07B5690025857F /* SurveyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000665DE2B07B5690025857F /* SurveyViewModelTests.swift */; };
+		000665E12B07B5E30025857F /* SurveyServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000665E02B07B5E30025857F /* SurveyServiceSpy.swift */; };
+		000665E32B07B8420025857F /* SurveySubmitServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000665E22B07B8420025857F /* SurveySubmitServiceSpy.swift */; };
 		00A2C3022B0532940087DECB /* SurveyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2C3012B0532940087DECB /* SurveyAppApp.swift */; };
 		00A2C3062B0532950087DECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A2C3052B0532950087DECB /* Assets.xcassets */; };
 		00A2C3092B0532950087DECB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00A2C3082B0532950087DECB /* Preview Assets.xcassets */; };
@@ -28,6 +34,7 @@
 		00B0501C2B0571C10028FFFA /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0501B2B0571C10028FFFA /* ServiceAssembly.swift */; };
 		00B0501E2B0572150028FFFA /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0501D2B0572150028FFFA /* NetworkAssembly.swift */; };
 		00FD44882B0635E2003A1BC8 /* View+OnLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD44872B0635E2003A1BC8 /* View+OnLoad.swift */; };
+		00FD448B2B06583D003A1BC8 /* SurveyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD448A2B06583D003A1BC8 /* SurveyServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000665D42B06B8D10025857F /* RequestExecutorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutorSpy.swift; sourceTree = "<group>"; };
+		000665D82B0799070025857F /* SubmittedAnswerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedAnswerState.swift; sourceTree = "<group>"; };
+		000665DA2B07AF520025857F /* SurveySubmitServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySubmitServiceTests.swift; sourceTree = "<group>"; };
+		000665DE2B07B5690025857F /* SurveyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModelTests.swift; sourceTree = "<group>"; };
+		000665E02B07B5E30025857F /* SurveyServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceSpy.swift; sourceTree = "<group>"; };
+		000665E22B07B8420025857F /* SurveySubmitServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySubmitServiceSpy.swift; sourceTree = "<group>"; };
 		00A2C2FE2B0532940087DECB /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A2C3012B0532940087DECB /* SurveyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppApp.swift; sourceTree = "<group>"; };
 		00A2C3052B0532950087DECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +85,7 @@
 		00B0501B2B0571C10028FFFA /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		00B0501D2B0572150028FFFA /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		00FD44872B0635E2003A1BC8 /* View+OnLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnLoad.swift"; sourceTree = "<group>"; };
+		00FD448A2B06583D003A1BC8 /* SurveyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000665D22B06B8BB0025857F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				000665D32B06B8C40025857F /* API */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		000665D32B06B8C40025857F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				000665D42B06B8D10025857F /* RequestExecutorSpy.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		000665DC2B07B5410025857F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				000665DD2B07B5480025857F /* Survey */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		000665DD2B07B5480025857F /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				000665DE2B07B5690025857F /* SurveyViewModelTests.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
 		00A2C2F52B0532940087DECB = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				00A2C3122B0532960087DECB /* SurveyAppTests.swift */,
+				000665DC2B07B5410025857F /* Modules */,
+				000665D22B06B8BB0025857F /* Network */,
+				00FD44892B06581C003A1BC8 /* Services */,
 			);
 			path = SurveyAppTests;
 			sourceTree = "<group>";
@@ -163,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				00A2C3432B0536160087DECB /* Question.swift */,
+				000665D82B0799070025857F /* SubmittedAnswerState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,8 +269,8 @@
 		00A2C3332B0534A20087DECB /* Survey */ = {
 			isa = PBXGroup;
 			children = (
-				00A2C3362B0534BC0087DECB /* View */,
-				00A2C3352B0534B10087DECB /* Model */,
+				00A2C32F2B0533AA0087DECB /* SurveyView.swift */,
+				00A2C3392B0534F80087DECB /* SurveyViewModel.swift */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -233,28 +283,23 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		00A2C3352B0534B10087DECB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				00A2C3392B0534F80087DECB /* SurveyViewModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		00A2C3362B0534BC0087DECB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				00A2C32F2B0533AA0087DECB /* SurveyView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		00FD44862B0635CA003A1BC8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				00FD44872B0635E2003A1BC8 /* View+OnLoad.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		00FD44892B06581C003A1BC8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				00FD448A2B06583D003A1BC8 /* SurveyServiceTests.swift */,
+				000665DA2B07AF520025857F /* SurveySubmitServiceTests.swift */,
+				000665E02B07B5E30025857F /* SurveyServiceSpy.swift */,
+				000665E22B07B8420025857F /* SurveySubmitServiceSpy.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +436,7 @@
 				00A2C3382B0534D20087DECB /* HomeView.swift in Sources */,
 				00A2C3022B0532940087DECB /* SurveyAppApp.swift in Sources */,
 				00B0501C2B0571C10028FFFA /* ServiceAssembly.swift in Sources */,
+				000665D92B0799070025857F /* SubmittedAnswerState.swift in Sources */,
 				00A2C33A2B0534F80087DECB /* SurveyViewModel.swift in Sources */,
 				00A2C3482B0536790087DECB /* SurveySubmitService.swift in Sources */,
 				00A2C3442B0536160087DECB /* Question.swift in Sources */,
@@ -411,6 +457,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A2C3132B0532960087DECB /* SurveyAppTests.swift in Sources */,
+				000665E32B07B8420025857F /* SurveySubmitServiceSpy.swift in Sources */,
+				00FD448B2B06583D003A1BC8 /* SurveyServiceTests.swift in Sources */,
+				000665D52B06B8D10025857F /* RequestExecutorSpy.swift in Sources */,
+				000665DF2B07B5690025857F /* SurveyViewModelTests.swift in Sources */,
+				000665E12B07B5E30025857F /* SurveyServiceSpy.swift in Sources */,
+				000665DB2B07AF520025857F /* SurveySubmitServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

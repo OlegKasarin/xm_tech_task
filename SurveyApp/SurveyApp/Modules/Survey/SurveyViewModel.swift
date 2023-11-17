@@ -82,13 +82,12 @@ final class SurveyViewModel: ObservableObject {
         self.surveySubmitService = surveySubmitService
     }
     
-    func didLoad() {
-        Task {
-            await fetchQuestions()
-        }
+    func didLoad() async throws {
+        await fetchQuestions()
     }
     
-    func submit() {
+    @MainActor
+    func submit() async throws {
         submittedState = .inProgress
         
         guard
@@ -98,9 +97,7 @@ final class SurveyViewModel: ObservableObject {
             return
         }
         
-        Task {
-            await submit(id: currentQuestion.id, answer: currentQuestion.answer)
-        }
+        await submit(id: currentQuestion.id, answer: currentQuestion.answer)
     }
 }
 
@@ -111,7 +108,6 @@ private extension SurveyViewModel {
     func fetchQuestions() async {
         do {
             questions = try await surveyService.fetch()
-            print(questions)
         } catch {
             questions = []
         }
